@@ -26,7 +26,8 @@ class MovieRepositoryImpl(
 
     suspend fun getMoviesFromAPI(): List<Movie> {
 
-        lateinit var movieList: List<Movie>
+        //lateinit var movieList: List<Movie>
+        var movieList: List<Movie> = emptyList()
 
         try{
             val response = movieRemoteDataSource.getMovies()
